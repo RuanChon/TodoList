@@ -1,4 +1,4 @@
 # My Todolist
 
+![image](https://github.com/RuanChon/TodoList/blob/master/src/assets/images/demo.png)
 
-https://github.com/RuanChon/TodoList/blob/master/src/assets/images/demo.png
