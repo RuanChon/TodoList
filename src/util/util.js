@@ -1,3 +1,6 @@
+
+
+// 验证字符串
 export function isNull(str){
     if ( str == "" ) return true;
     let regu = "^[ ]+$";
