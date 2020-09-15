@@ -64,7 +64,7 @@
 
 <script>
 import "../assets/css/flex.css";
-import { isNull } from "../util/util";
+import { isNull } from "../utils/utils";
 
 export default {
   data() {
