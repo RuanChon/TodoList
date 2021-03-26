@@ -75,10 +75,18 @@ export default {
       finishArr: [] // 已完成 List
     };
   },
+  created(){
+    let going = localStorage.getItem('rc-todolist').split(',')
+    if(going){
+      this.goingArr = going
+    }else{
+      alert('缓存没有记录')
+    }
+  },
   methods: {
     // 新增待办
     addList() {
-      let res = isNull(this.addItem);
+      let res = isNull(this.addItem.trim());
       if (res == true) {
         return this.$message({
           message: "请输入待办事项",
@@ -89,6 +97,7 @@ export default {
       }
 
       this.goingArr.push(this.addItem);
+      localStorage.setItem('rc-todolist', this.goingArr)
       this.addItem = null;
       console.log("当前未完成的：", this.goingArr);
     },
@@ -96,6 +105,7 @@ export default {
     // 完成事项
     finishChange(arr, idx) {
       let itme = arr.splice(idx, 1);
+      localStorage.setItem('rc-todolist', this.goingArr)
       this.finishArr.push(itme.toString());
     },
 
@@ -108,6 +118,7 @@ export default {
     // 删除 Item
     delItem(arr, idx) {
       arr.splice(idx, 1);
+      localStorage.setItem('rc-todolist', this.goingArr)
     }
   },
   computed: {
