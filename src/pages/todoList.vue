@@ -57,7 +57,7 @@
 
     <!-- footer -->
     <div class="footerContainer flex-row-center">
-        <span>RuanChon -- 2020/07/02</span>
+        <span>Author：RuanChon -- 2020/07/02</span>
     </div>
   </div>
 </template>
