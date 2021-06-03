@@ -77,10 +77,9 @@ export default {
   },
   created(){
     let going = localStorage.getItem('rc-todolist').split(',')
-    if(going){
+    console.log('缓存', going)
+    if(going[0]){
       this.goingArr = going
-    }else{
-      alert('缓存没有记录')
     }
   },
   methods: {
