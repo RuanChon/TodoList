@@ -103,15 +103,15 @@ export default {
 
     // 完成事项
     finishChange(arr, idx) {
-      let itme = arr.splice(idx, 1);
+      let item = arr.splice(idx, 1);
       localStorage.setItem('rc-todolist', this.goingArr)
-      this.finishArr.push(itme.toString());
+      this.finishArr.push(item.toString());
     },
 
     // 重新拉起事项
     goingChange(arr, idx) {
-      let itme = arr.splice(idx, 1);
-      this.goingArr.push(itme.toString());
+      let item = arr.splice(idx, 1);
+      this.goingArr.push(item.toString());
     },
 
     // 删除 Item
