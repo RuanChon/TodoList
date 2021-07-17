@@ -76,7 +76,12 @@ export default {
     };
   },
   created(){
-    let going = localStorage.getItem('rc-todolist').split(',')
+    let cache = localStorage.getItem('rc-todolist')
+    if(!cache){
+      console.log('当前没有缓存');
+      return
+    }
+    let going = cache.split(',')
     console.log('缓存', going)
     if(going[0]){
       this.goingArr = going
